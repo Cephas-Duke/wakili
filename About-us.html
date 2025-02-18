@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Learn about Heriwadi Christian School, our mission, vision, history, and core values. Join our community today!">
+    <meta name="keywords" content="Heriwadi Christian School, Ongata Rongai, Christian education, leadership, holistic learning">
+    <title>About Us - Heriwadi Christian School</title>
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <!-- Custom CSS -->
+    <style>
+        /* Hero Section */
+        .hero-section {
+            background: url('images/danc.jpg') no-repeat center center/cover;
+            height: 400px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            text-align: center;
+        }
+        .hero-section h1 {
+            font-size: 3rem;
+            font-weight: bold;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        }
+        @media (max-width: 768px) {
+            .hero-section {
+                height: 300px;
+            }
+            .hero-section h1 {
+                font-size: 2.5rem;
+            }
+        }
+
+        /* Section Styling */
+        .section {
+            padding: 60px 0;
+        }
+        .section h2 {
+            font-size: 2.5rem;
+            margin-bottom: 30px;
+            color: #333;
+        }
+        .section p {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            color: #555;
+        }
+
+        /* Core Values */
+        .core-values .value-item {
+            text-align: center;
+            padding: 20px;
+        }
+        .core-values .value-item i {
+            font-size: 2.5rem;
+            color: #007bff;
+            margin-bottom: 15px;
+        }
+
+        /* Gallery */
+        .gallery img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            margin-bottom: 15px;
+            border-radius: 10px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .gallery img:hover {
+            transform: scale(1.05);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Call-to-Action */
+        .cta-section {
+            background: #b00a0a;
+            color: white;
+            padding: 60px 0;
+            text-align: center;
+        }
+        .cta-section .btn {
+    background: white;
+    color: #b00a0a;
+    padding: 10px 30px;
+    font-size: 1.2rem;
+    border-radius: 25px;
+    transition: background 0.3s ease, color 0.3s ease;
+}
+
+.cta-section .btn:hover {
+    background: #b00a0a;
+    color: white;
+    border: 2px solid white;
+}
+
+.cta-section {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    gap: 10px;
+}
+         /* Top Bar */
+        .top-bar {
+         background-color: #f8f9fa;
+         padding: 10px 0;
+        }
+         .top-bar .logo img {
+         height: 60px;
+        }
+        .contact-info {
+         display: flex;
+         flex-wrap: wrap;
+         justify-content: center;
+         gap: 10px;
+        }
+        .contact-item {
+         display: flex;
+         align-items: center;
+         gap: 8px;
+         font-size: 16px;
+        }
+       .contact-item i {
+         color: #b00a0a;
+         font-size: 20px;
+        }
+        .contact-item span {
+         font-weight: bold;
+         color: #b00a0a;
+         display: block;
+        }
+        .contact-item a {
+         color: #333;
+         text-decoration: none;
+         transition: color 0.3s ease;
+        }
+        .contact-item a:hover {
+         color: #c00;
+        }
+
+        /* Responsive Top Bar */
+         @media (max-width: 767.98px) {
+        .top-bar .logo {
+         margin-bottom: 10px; /* Add space below the logo on small screens */
+        }
+        .contact-info {
+         flex-direction: column; /* Stack contact items vertically */
+         gap: 5px; /* Reduce gap between items */
+        }
+        .contact-item {
+         font-size: 14px; /* Reduce font size for small screens */
+        }
+        }
+        /* Navbar */
+        .navbar {
+            background-color: #b00a0a;
+            padding: 10px 0;
+        }
+        .navbar-brand {
+            color: #fff !important;
+            font-size: 24px;
+            font-weight: bold;
+        }
+        .navbar-toggler {
+            border: 1px solid #fff;
+        }
+        .navbar-toggler-icon {
+            background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(255, 255, 255, 1)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+        }
+        .navbar-nav .nav-link {
+            color: #fff !important;
+            font-size: 18px;
+            margin: 0 10px;
+        }
+        .navbar-nav .nav-link:hover {
+            color: #007bff !important;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <!-- Top Bar -->
+<div class="top-bar">
+    <div class="container">
+      <div class="row align-items-center">
+        <!-- Logo -->
+        <div class="col-12 col-md-4 text-center text-md-left">
+          <div class="logo">
+            <img src="images/school-logo.jpg" alt="Heriwadi Christian Schools Logo" class="img-fluid">
+          </div>
+        </div>
+        <!-- Contact Info -->
+        <div class="col-12 col-md-8">
+          <div class="contact-info text-center text-md-right">
+            <div class="contact-item">
+              <div><i class="fas fa-phone"></i></div>
+              <div><span>Phone:</span> <a href="tel:+254723322449">+254723322449</a></div>
+            </div>
+            <div class="contact-item">
+              <div><i class="fas fa-envelope"></i></div>
+              <div><span>Email:</span> <a href="mailto:heriwadichristianschools@gmail.com">heriwadichristianschools@gmail.com</a></div>
+            </div>
+            <div class="contact-item">
+              <div><i class="fas fa-map-marker-alt"></i></div>
+              <div><span>Address:</span> <a href="https://www.google.com/maps?q=ONGATA+RONGAI,+ALONG+MAASAI+LODGE-RIMPA+ROAD" target="_blank">ONGATA RONGAI, ALONG MAASAI LODGE-RIMPA ROAD</a></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+        
+        <nav class="navbar navbar-expand-lg navbar-dark bg-red">
+            <div class="container">
+                <a class="navbar-brand" href="#">Heriwadi Christian School</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item active">
+                            <a class="nav-link" href="HCS.HTML">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="About-us.html">About Us</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="Admissions.html">Admissions</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="Gallery.html">Gallery</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="Contact-us.html">Contact Us</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <h1>About Heriwadi Christian School</h1>
+    </section>
+
+    <!-- Introduction Section -->
+    <section class="section">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <h2>Welcome to Heriwadi Christian School</h2>
+                    <p>
+                        Heriwadi Christian School is a faith-based institution dedicated to providing holistic education 
+                        that nurtures the mind, body, and spirit of our learners. Our mission is to develop leaders 
+                        who are equipped with the skills and values to make a positive impact in the world.
+                    </p>
+                </div>
+                <div class="col-md-6">
+                    <img src="images/back.g.jpg" alt="Students learning at Heriwadi Christian School" class="img-fluid rounded">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Mission Section -->
+    <section class="section">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <img src="images/mission.jpg" alt="Mission of Heriwadi Christian School" class="img-fluid rounded">
+                </div>
+                <div class="col-md-6">
+                    <h2>OUR MISSION</h2>
+                    <ul>
+                        <li>Create an environment for holistic learning</li>
+                        <li>Encourage learners to discover and develop leadership skills</li>
+                        <li>Equip learners to be achievers</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Vision Section -->
+    <section class="section">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <img src="images/vision.png" alt="Vision of Heriwadi Christian School" class="img-fluid rounded">
+                </div>
+                <div class="col-md-6">
+                    <h2>OUR VISION</h2>
+                    <p>
+                        Learners with a holistic approach to education coupled with leadership skills.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- History Section -->
+    <section class="section bg-light">
+        <div class="container">
+            <h2 class="text-center">Our History</h2>
+            <p class="text-center">
+                Established in 2018, Heriwadi Christian School has grown from a small community school to a leading 
+                educational institution in Ongata Rongai. Over the years, we have remained committed to our core values 
+                of excellence, holistic growth, and servant leadership.
+            </p>
+            <p class="text-center">
+                Heriwadi Christian Schools enrolled her first student in September 2018. This was the third term for the school calendar. On that first enrolment, there was an intake of two learners. The term ended with the two learners.
+            </p>
+            <p class="text-center">
+                The following year, HCS was determined to offer education and opened her doors for learners. There was an enrolment of three new learners, but one of the previous learners had dropped. There were four learners by the end of the first term.
+            </p>
+        </div>
+    </section>
+
+    <!-- Core Values Section -->
+    <section class="section">
+        <div class="container">
+            <h2 class="text-center">Our Core Values</h2>
+            <div class="row core-values">
+                <div class="col-md-4 value-item">
+                    <i class="fas fa-book"></i>
+                    <h3>Excellence</h3>
+                    <p>We strive for academic and personal excellence in all that we do.</p>
+                </div>
+                <div class="col-md-4 value-item">
+                    <i class="fas fa-hand-holding-heart"></i>
+                    <h3>Servant Leadership</h3>
+                    <p>We uphold the highest standards of honesty and ethical behavior.</p>
+                </div>
+                <div class="col-md-4 value-item">
+                    <i class="fas fa-users"></i>
+                    <h3>Holistic Growth</h3>
+                    <p>We foster a sense of belonging and collaboration among our students and staff.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Leadership Section -->
+    <section class="section bg-light">
+        <div class="container">
+            <h2 class="text-center">Our Leadership</h2>
+            <div class="row">
+                <div class="col-md-4 text-center">
+                    <img src="images/rev ben.jpg" alt="Rev. Ben Thuku - Director" class="img-fluid rounded-circle mb-3" style="width: 150px; height: 150px;">
+                    <h3>Rev. Ben Thuku</h3>
+                    <p>Director</p>
+                </div>
+                <div class="col-md-4 text-center">
+                    <img src="images/pst jean.jpg" alt="Pst. Jean Thuku - Co-Director" class="img-fluid rounded-circle mb-3" style="width: 150px; height: 150px;">
+                    <h3>Pst. Jean Thuku</h3>
+                    <p>Co-Director</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section class="section">
+        <div class="container">
+            <h2 class="text-center">Gallery</h2>
+            <div class="row gallery">
+                <div class="col-md-4">
+                    <img src="images/tr. alice.JPG" alt="Teacher Alice at Heriwadi Christian School">
+                </div>
+                <div class="col-md-4">
+                    <img src="images/van.jpg" alt="School van at Heriwadi Christian School">
+                </div>
+                <div class="col-md-4">
+                    <img src="images/pg.JPG" alt="Playground at Heriwadi Christian School">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Call-to-Action Section -->
+    <section class="cta-section">
+        <div class="container">
+            <h2>Join Our Community</h2>
+            <p>Discover the difference at Heriwadi Christian School. Enroll your child today!</p>
+            <a href="Admissions.html" class="btn">Apply Now</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white text-center py-4">
+        <div class="container">
+            <p>&copy; 2025 Heriwadi Christian School. All rights reserved.</p>
+            <p>
+                <a href="#" class="text-white me-3">Privacy Policy</a> |
+                <a href="#" class="text-white ms-3">Terms of Use</a>
+            </p>
+        </div>
+    </footer>
+
+    <!-- Bootstrap 5 JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,524 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admissions - Heriwadi Christian Schools</title>
+  <!-- Bootstrap CSS -->
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+  <!-- FontAwesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+  <!-- Custom CSS -->
+  <style>
+     body {
+      font-family: Arial, sans-serif;
+      color: #333;
+    }
+
+    /* Hero Section */
+    .hero-section {
+      background: url('images/parade.jpg') no-repeat center center/cover;
+      color: #fff;
+      padding: 150px 0;
+      text-align: center;
+    }
+
+    .hero-section h1 {
+      font-size: 3.5rem;
+      font-weight: bold;
+      margin-bottom: 20px;
+    }
+
+    .hero-section p {
+      font-size: 1.2rem;
+      margin-bottom: 30px;
+    }
+
+    .hero-section .btn {
+      background-color: #c00;
+      color: #fff;
+      padding: 10px 30px;
+      font-size: 1.2rem;
+      border-radius: 5px;
+      text-transform: uppercase;
+    }
+
+    .hero-section .btn:hover {
+      background-color: #a00;
+    }
+
+    /* Admission Requirements */
+    .admission-requirements {
+      padding: 50px 0;
+      background-color: #f9f9f9;
+    }
+
+    .admission-requirements h2 {
+      text-align: center;
+      margin-bottom: 40px;
+      font-size: 2rem;
+      color: #c00;
+    }
+
+    .admission-requirements ul {
+      list-style-type: none;
+      padding-left: 0;
+    }
+
+    .admission-requirements ul li {
+      font-size: 1.1rem;
+      margin-bottom: 10px;
+      padding-left: 20px;
+      position: relative;
+    }
+
+    .admission-requirements ul li::before {
+      content: "•";
+      color: #c00;
+      font-size: 1.5rem;
+      position: absolute;
+      left: 0;
+      top: -5px;
+    }
+
+    /* Admission Process */
+    .admission-process {
+      padding: 50px 0;
+    }
+
+    .admission-process h2 {
+      text-align: center;
+      margin-bottom: 40px;
+      font-size: 2rem;
+      color: #c00;
+    }
+
+    .admission-process .step {
+      text-align: center;
+      margin-bottom: 30px;
+    }
+
+    .admission-process .step i {
+      font-size: 2.5rem;
+      color: #c00;
+      margin-bottom: 10px;
+    }
+
+    .admission-process .step h3 {
+      font-size: 1.5rem;
+      margin-bottom: 10px;
+    }
+
+    .admission-process .step p {
+      font-size: 1.1rem;
+    }
+
+    /* Why Choose Us */
+    .why-choose-us {
+      padding: 50px 0;
+      background-color: #f9f9f9;
+    }
+
+    .why-choose-us h2 {
+      text-align: center;
+      margin-bottom: 40px;
+      font-size: 2rem;
+      color: #c00;
+    }
+
+    .why-choose-us .card {
+      text-align: center;
+      padding: 20px;
+      border: none;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    .why-choose-us .card i {
+      font-size: 2.5rem;
+      color: #c00;
+      margin-bottom: 10px;
+    }
+
+    .why-choose-us .card h3 {
+      font-size: 1.5rem;
+      margin-bottom: 10px;
+    }
+
+    /* Admission Form */
+    .admission-form {
+      padding: 50px 0;
+      background-color: #fff;
+    }
+
+    .admission-form h2 {
+      text-align: center;
+      margin-bottom: 40px;
+      font-size: 2rem;
+      color: #c00;
+    }
+
+    .admission-form .form-group {
+      margin-bottom: 20px;
+    }
+
+    .admission-form label {
+      font-weight: bold;
+    }
+
+    .admission-form input,
+    .admission-form textarea {
+      width: 100%;
+      padding: 10px;
+      border: 1px solid #ddd;
+      border-radius: 5px;
+    }
+
+    .admission-form button {
+      background-color: #c00;
+      color: #fff;
+      padding: 10px 30px;
+      font-size: 1.2rem;
+      border: none;
+      border-radius: 5px;
+      text-transform: uppercase;
+    }
+
+    .admission-form button:hover {
+      background-color: #a00;
+    }
+
+    /* Contact Section */
+    .contact-section {
+      padding: 50px 0;
+    }
+
+    .contact-section h2 {
+      text-align: center;
+      margin-bottom: 40px;
+      font-size: 2rem;
+      color: #c00;
+    }
+
+    .contact-section .btn {
+      background-color: #c00;
+      color: #fff;
+      padding: 10px 30px;
+      font-size: 1.2rem;
+      border-radius: 5px;
+      text-transform: uppercase;
+    }
+
+    .contact-section .btn:hover {
+      background-color: #a00;
+    }
+ /* Top Bar */
+.top-bar {
+  background-color: #f8f9fa;
+  padding: 10px 0;
+}
+.top-bar .logo img {
+  height: 60px;
+}
+.contact-info {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+}
+.contact-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 16px;
+}
+.contact-item i {
+  color: #b00a0a;
+  font-size: 20px;
+}
+.contact-item span {
+  font-weight: bold;
+  color: #b00a0a;
+  display: block;
+}
+.contact-item a {
+  color: #333;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+.contact-item a:hover {
+  color: #c00;
+}
+
+/* Responsive Top Bar */
+@media (max-width: 767.98px) {
+  .top-bar .logo {
+    margin-bottom: 10px; /* Add space below the logo on small screens */
+  }
+  .contact-info {
+    flex-direction: column; /* Stack contact items vertically */
+    gap: 5px; /* Reduce gap between items */
+  }
+  .contact-item {
+    font-size: 14px; /* Reduce font size for small screens */
+  }
+}
+ /* Navbar */
+ .navbar {
+            background-color: #b00a0a;
+            padding: 10px 0;
+        }
+        .navbar-brand {
+            color: #fff !important;
+            font-size: 24px;
+            font-weight: bold;
+        }
+        .navbar-toggler {
+            border: 1px solid #fff;
+        }
+        .navbar-toggler-icon {
+            background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(255, 255, 255, 1)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+        }
+        .navbar-nav .nav-link {
+            color: #fff !important;
+            font-size: 18px;
+            margin: 0 10px;
+        }
+        .navbar-nav .nav-link:hover {
+            color: #007bff !important;
+        }
+  </style>
+</head>
+<body>
+  <header>
+    <!-- Top Bar -->
+ <div class="top-bar">
+ <div class="container">
+  <div class="row align-items-center">
+    <!-- Logo -->
+    <div class="col-12 col-md-4 text-center text-md-left">
+      <div class="logo">
+        <img src="images/school-logo.jpg" alt="Heriwadi Christian Schools Logo" class="img-fluid">
+      </div>
+    </div>
+    <!-- Contact Info -->
+    <div class="col-12 col-md-8">
+      <div class="contact-info text-center text-md-right">
+        <div class="contact-item">
+          <div><i class="fas fa-phone"></i></div>
+          <div><span>Phone:</span> <a href="tel:+254723322449">+254723322449</a></div>
+        </div>
+        <div class="contact-item">
+          <div><i class="fas fa-envelope"></i></div>
+          <div><span>Email:</span> <a href="mailto:heriwadichristianschools@gmail.com">heriwadichristianschools@gmail.com</a></div>
+        </div>
+        <div class="contact-item">
+          <div><i class="fas fa-map-marker-alt"></i></div>
+          <div><span>Address:</span> <a href="https://www.google.com/maps?q=ONGATA+RONGAI,+ALONG+MAASAI+LODGE-RIMPA+ROAD" target="_blank">ONGATA RONGAI, ALONG MAASAI LODGE-RIMPA ROAD</a></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+    
+    <nav class="navbar navbar-expand-lg navbar-dark bg-red">
+        <div class="container">
+          <a class="navbar-brand" href="#">Heriwadi Christian School</a>
+          <!-- Corrected Toggler Button -->
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <!-- Navbar Links -->
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+              <li class="nav-item active">
+                <a class="nav-link" href="HCS.HTML">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="About-us.html">About Us</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="Admissions.html">Admissions</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Gallery</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Contact Us</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+</header>
+  <!-- Hero Section -->
+  <section class="hero-section">
+    <div class="container">
+      <h1>Admissions</h1>
+      <p>Join Heriwadi Christian Schools for a transformative educational experience.</p>
+      <a href="#admission-form" class="btn">Apply Now</a>
+    </div>
+  </section>
+
+  <!-- Admission Requirements -->
+  <section class="admission-requirements">
+    <div class="container">
+      <h2>Admission Requirements</h2>
+      <ul>
+        <li>Completed application form</li>
+        <li>Birth certificate</li>
+        <li>Previous school reports</li>
+        <li>Two passport-sized photos</li>
+        <li>Medical records</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- Admission Process -->
+  <section class="admission-process">
+    <div class="container">
+      <h2>Admission Process</h2>
+      <div class="row">
+        <div class="col-md-4 step">
+          <i class="fas fa-file-alt"></i>
+          <h3>Step 1: Application</h3>
+          <p>Submit the application form along with required documents.</p>
+        </div>
+        <div class="col-md-4 step">
+          <i class="fas fa-calendar-check"></i>
+          <h3>Step 2: Interview</h3>
+          <p>Attend an interview with the admissions team.</p>
+        </div>
+        <div class="col-md-4 step">
+          <i class="fas fa-check-circle"></i>
+          <h3>Step 3: Confirmation</h3>
+          <p>Receive your admission letter and complete the enrollment process.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Why Choose Us -->
+  <section class="why-choose-us">
+    <div class="container">
+      <h2>Why Choose Us?</h2>
+      <div class="row">
+        <div class="col-md-4">
+          <div class="card">
+            <i class="fas fa-graduation-cap"></i>
+            <h3>Quality Education</h3>
+            <p>We provide a holistic and world-class education.</p>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card">
+            <i class="fas fa-users"></i>
+            <h3>Experienced Staff</h3>
+            <p>Our teachers are highly qualified and experienced.</p>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card">
+            <i class="fas fa-heart"></i>
+            <h3>Nurturing Environment</h3>
+            <p>We foster a supportive and inclusive community.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section> 
+
+  <!-- Admission Form -->
+  <section id="admission-form" class="admission-form">
+    <div class="container">
+      <h2>Admission Form</h2>
+      <form id="applicationForm" onsubmit="submitViaWhatsApp(event)">
+        <div class="form-group">
+          <label for="fullName">Full Name</label>
+          <input type="text" id="fullName" name="fullName" required>
+        </div>
+        <div class="form-group">
+          <label for="email">Email Address</label>
+          <input type="email" id="email" name="email" required>
+        </div>
+        <div class="form-group">
+          <label for="phone">Phone Number</label>
+          <input type="tel" id="phone" name="phone" required>
+        </div>
+        <div class="form-group">
+          <label for="grade">Grade Applying For</label>
+          <input type="text" id="grade" name="grade" required>
+        </div>
+        <div class="form-group">
+          <label for="message">Additional Information</label>
+          <textarea id="message" name="message" rows="5"></textarea>
+        </div>
+        <button type="submit">Submit Application</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section class="contact-section">
+    <div class="container">
+      <h2>Contact Us for More Information</h2>
+      <p>Have questions? Reach out to our admissions team.</p>
+      <a href="Contact-us.html" class="btn">Contact Us</a>
+    </div>
+  </section>
+   <!-- Footer -->
+   <footer class="bg-dark text-white text-center py-4">
+    <div class="container">
+        <p>&copy; 2025 Heriwadi Christian School. All rights reserved.</p>
+        <p>
+            <a href="#" class="text-white me-3">Privacy Policy</a> |
+            <a href="#" class="text-white ms-3">Terms of Use</a>
+        </p>
+    </div>
+   </footer>
+   <script>
+    function submitViaWhatsApp(event) {
+      event.preventDefault(); // Prevent default form submission
+  
+      // Get form data
+      const name = document.getElementById('name').value;
+      const email = document.getElementById('email').value;
+      const phone = document.getElementById('phone').value;
+      const message = document.getElementById('message').value;
+  
+      // Format the message
+      const whatsappMessage = `Name: ${name}%0AEmail: ${email}%0APhone: ${phone}%0AMessage: ${message}`;
+  
+      // Open WhatsApp with the pre-filled message
+      window.open(`https://wa.me/254723322449?text=${whatsappMessage}`, '_blank');
+    }
+  </script>
+
+  <!-- Bootstrap JS and Dependencies -->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+  <!-- Form Submission Script -->
+  <script>
+    document.getElementById('applicationForm').addEventListener('submit', function (event) {
+      event.preventDefault(); // Prevent form submission
+
+      // Validate form fields
+      const fullName = document.getElementById('fullName').value;
+      const email = document.getElementById('email').value;
+      const phone = document.getElementById('phone').value;
+      const grade = document.getElementById('grade').value;
+
+      if (!fullName || !email || !phone || !grade) {
+        alert('Please fill out all required fields.');
+        return;
+      }
+
+      // Simulate form submission (replace with actual submission logic)
+      alert('Thank you for submitting your application! We will contact you shortly.');
+      document.getElementById('applicationForm').reset(); // Clear the form
+    });
+  </script>
+</body>
+</html>

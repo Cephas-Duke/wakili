@@ -1,0 +1,738 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gallery - Heriwadi Christian Schools</title>
+  <!-- Bootstrap CSS -->
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Lightbox CSS -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/css/lightbox.min.css" rel="stylesheet">
+  <!-- FontAwesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+  <!-- Custom CSS -->
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      color: #333;
+    }
+    .gallery-section {
+      padding: 50px 0;
+    }
+    .gallery-section h2 {
+      text-align: center;
+      margin-bottom: 40px;
+      font-size: 2.5rem;
+      color: #c00;
+    }
+    .gallery-category {
+      margin-bottom: 50px;
+    }
+    .gallery-category h3 {
+      text-align: center;
+      margin-bottom: 20px;
+      font-size: 2rem;
+      color: #b00a0a;
+    }
+    .gallery-item {
+      margin-bottom: 30px;
+    }
+    .gallery-item img {
+      width: 100%;
+      border-radius: 10px;
+      transition: transform 0.3s ease;
+    }
+    .gallery-item img:hover {
+      transform: scale(1.05);
+    }
+    /* Top Bar */
+    .top-bar {
+      background-color: #f8f9fa;
+      padding: 10px 0;
+    }
+    .top-bar .logo img {
+      height: 60px;
+    }
+    .contact-info {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 10px;
+    }
+    .contact-item {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 16px;
+    }
+    .contact-item i {
+      color: #b00a0a;
+      font-size: 20px;
+    }
+    .contact-item span {
+      font-weight: bold;
+      color: #b00a0a;
+      display: block;
+    }
+    .contact-item a {
+      color: #333;
+      text-decoration: none;
+      transition: color 0.3s ease;
+    }
+    .contact-item a:hover {
+      color: #c00;
+    }
+    /* Responsive Top Bar */
+    @media (max-width: 767.98px) {
+      .top-bar .logo {
+        margin-bottom: 10px; /* Add space below the logo on small screens */
+      }
+      .contact-info {
+        flex-direction: column; /* Stack contact items vertically */
+        gap: 5px; /* Reduce gap between items */
+      }
+      .contact-item {
+        font-size: 14px; /* Reduce font size for small screens */
+      }
+    }
+    /* Navbar */
+    .navbar {
+      background-color: #b00a0a;
+      padding: 10px 0;
+    }
+    .navbar-brand {
+      color: #fff !important;
+      font-size: 24px;
+      font-weight: bold;
+    }
+    .navbar-toggler {
+      border: 1px solid #fff;
+    }
+    .navbar-toggler-icon {
+      background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(255, 255, 255, 1)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+    }
+    .navbar-nav .nav-link {
+      color: #fff !important;
+      font-size: 18px;
+      margin: 0 10px;
+    }
+    .navbar-nav .nav-link:hover {
+      color: #007bff !important;
+    }
+    /* Banner Section */
+    .banner {
+      position: relative;
+      text-align: center;
+      margin-bottom: 40px; /* Adjust spacing as needed */
+    }
+    .banner img {
+      width: 100%;
+      height: auto;
+      border-radius: 10px; /* Optional: Add rounded corners */
+    }
+    .banner-text {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      color: #fff;
+      z-index: 1;
+    }
+    .banner-text h2 {
+      font-size: 3rem;
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+    .banner-text p {
+      font-size: 1.2rem;
+    }
+  </style>
+</head>
+<body>
+  <!-- Header -->
+  <header>
+    <!-- Top Bar -->
+    <div class="top-bar">
+      <div class="container">
+        <div class="row align-items-center">
+          <!-- Logo -->
+          <div class="col-12 col-md-4 text-center text-md-left">
+            <div class="logo">
+              <img src="images/school-logo.jpg" alt="Heriwadi Christian Schools Logo" class="img-fluid">
+            </div>
+          </div>
+          <!-- Contact Info -->
+          <div class="col-12 col-md-8">
+            <div class="contact-info text-center text-md-right">
+              <div class="contact-item">
+                <div><i class="fas fa-phone"></i></div>
+                <div><span>Phone:</span> <a href="tel:+254723322449">+254723322449</a></div>
+              </div>
+              <div class="contact-item">
+                <div><i class="fas fa-envelope"></i></div>
+                <div><span>Email:</span> <a href="mailto:heriwadichristianschools@gmail.com">heriwadichristianschools@gmail.com</a></div>
+              </div>
+              <div class="contact-item">
+                <div><i class="fas fa-map-marker-alt"></i></div>
+                <div><span>Address:</span> <a href="https://www.google.com/maps?q=ONGATA+RONGAI,+ALONG+MAASAI+LODGE-RIMPA+ROAD" target="_blank">ONGATA RONGAI, ALONG MAASAI LODGE-RIMPA ROAD</a></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-red">
+      <div class="container">
+        <a class="navbar-brand" href="#">Heriwadi Christian School</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="HCS.HTML">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="About-us.html">About Us</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="Admissions.html">Admissions</a>
+            </li>
+            <li class="nav-item active">
+              <a class="nav-link" href="Gallery.html">Gallery</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="Contact-us.html">Contact Us</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Gallery Section -->
+  <section class="gallery-section">
+    <div class="container">
+      <!-- Banner Section -->
+      <section class="banner">
+        <img src="Gallery/van-banner.jpg" alt="Gallery Banner" class="img-fluid">
+        <div class="banner-text">
+          <h2>Our Gallery</h2>
+          <p>Explore the vibrant life at Heriwadi Christian Schools</p>
+        </div>
+      </section>
+
+      <!-- School Category -->
+      <div class="gallery-category">
+        <h3>School</h3>
+        <div class="row">
+          <!-- School Images -->
+          <div class="col-md-4 gallery-item">
+            <a href="Gallery/1st-grad.jpg" data-lightbox="school" data-title="School Event">
+              <img src="Gallery/1st-grad.jpg" alt="School Event">
+            </a>
+          </div>
+          <div class="col-md-4 gallery-item">
+            <a href="Gallery/cbc.jpg" data-lightbox="school" data-title="School Event">
+              <img src="Gallery/cbc.jpg" alt="School Event">
+            </a>
+          </div>
+          <div class="col-md-4 gallery-item">
+            <a href="Gallery/cbc3.jpg" data-lightbox="school" data-title="School Event">
+              <img src="Gallery/cbc3.jpg" alt="School Event">
+            </a>
+          </div>
+          <div class="col-md-4 gallery-item">
+            <a href="Gallery/cbc4.jpg" data-lightbox="school" data-title="School Event">
+              <img src="Gallery/cbc4.jpg" alt="School Event">
+            </a>
+          </div>
+          <div class="col-md-4 gallery-item">
+            <a href="Gallery/cbc5.jpg" data-lightbox="school" data-title="School Event">
+              <img src="Gallery/cbc5.jpg" alt="School Event">
+            </a>
+          </div>
+          <div class="col-md-4 gallery-item">
+            <a href="Gallery/cbc6.jpg" data-lightbox="school" data-title="School Event">
+              <img src="Gallery/cbc6.jpg" alt="School Event">
+            </a>
+          </div>
+          <div class="col-md-4 gallery-item">
+            <a href="Gallery/cbc7.jpg" data-lightbox="school" data-title="School Event">
+              <img src="Gallery/cbc7.jpg" alt="School Event">
+            </a>
+          </div>
+          <div class="col-md-4 gallery-item">
+            <a href="Gallery/awardstudent.jpg" data-lightbox="school" data-title="School Event">
+              <img src="Gallery/awardstudent.jpg" alt="School Event">
+            </a>
+          </div>
+          <div class="col-md-4 gallery-item">
+            <a href="Gallery/awardstudent1.jpg" data-lightbox="school" data-title="School Event">
+              <img src="Gallery/awardstudent1.jpg" alt="School Event">
+            </a>
+          </div>
+          <div class="col-md-4 gallery-item">
+            <a href="Gallery/brighton.jpg" data-lightbox="school" data-title="School Event">
+              <img src="Gallery/brighton.jpg" alt="School Event">
+            </a>
+          </div>
+          <div class="col-md-4 gallery-item">
+            <a href="Gallery/grad20231.jpg" data-lightbox="school" data-title="School Event">
+              <img src="Gallery/grad20231.jpg" alt="School Event">
+            </a>
+          </div>
+          <div class="col-md-4 gallery-item">
+            <a href="Gallery/grad20232.jpg" data-lightbox="school" data-title="School Event">
+              <img src="Gallery/grad20232.jpg" alt="School Event">
+            </a>
+          </div>
+          <div class="col-md-4 gallery-item">
+            <a href="Gallery/grad20233.jpg" data-lightbox="school" data-title="School Event">
+              <img src="Gallery/grad20233.jpg" alt="School Event">
+            </a>
+          </div>
+          <div class="col-md-4 gallery-item">
+            <a href="Gallery/grad20234.jpg" data-lightbox="school" data-title="School Event">
+              <img src="Gallery/grad20234.jpg" alt="School Event">
+            </a>
+          </div>
+          <div class="col-md-4 gallery-item">
+            <a href="Gallery/gradchurch.jpg" data-lightbox="school" data-title="School Event">
+              <img src="Gallery/gradchurch.jpg" alt="School Event">
+            </a>
+          </div>
+          <div class="col-md-4 gallery-item">
+            <a href="Gallery/gradchuch.jpg" data-lightbox="school" data-title="School Event">
+              <img src="Gallery/gradchuch.jpg" alt="School Event">
+            </a>
+          </div>
+          <div class="col-md-4 gallery-item">
+            <a href="Gallery/gradchurch3.jpg" data-lightbox="school" data-title="School Event">
+              <img src="Gallery/gradchurch3.jpg" alt="School Event">
+            </a>
+          </div>
+          <div class="col-md-4 gallery-item">
+            <a href="Gallery/class.jpg" data-lightbox="school" data-title="School Event">
+              <img src="Gallery/class.jpg" alt="School Event">
+            </a>
+          </div>
+          <div class="col-md-4 gallery-item">
+            <a href="Gallery/grad20231.jpg" data-lightbox="school" data-title="School Event">
+              <img src="Gallery/grad20231.jpg" alt="School Event">
+            </a>
+          </div>
+          <div class="col-md-4 gallery-item">
+            <a href="Gallery/grad20232.jpg" data-lightbox="school" data-title="School Event">
+              <img src="Gallery/grad20232.jpg" alt="School Event">
+            </a>
+          </div>
+          <div class="col-md-4 gallery-item">
+            <a href="Gallery/grad20233.jpg" data-lightbox="school" data-title="School Event">
+              <img src="Gallery/grad20233.jpg" alt="School Event">
+            </a>
+          </div>
+          <div class="col-md-4 gallery-item">
+            <a href="Gallery/grad20234.jpg" data-lightbox="school" data-title="School Event">
+              <img src="Gallery/grad20234.jpg" alt="School Event">
+            </a>
+          </div>
+          <div class="col-md-4 gallery-item">
+            <a href="Gallery/gradstudent1.jpg" data-lightbox="school" data-title="School Event">
+              <img src="Gallery/gradstudent1.jpg" alt="School Event">
+            </a>
+          </div>
+          <div class="col-md-4 gallery-item">
+            <a href="Gallery/gradestudent2.jpg" data-lightbox="school" data-title="School Event">
+              <img src="Gallery/gradestudent2.jpg" alt="School Event">
+            </a>
+          </div>
+          <div class="col-md-4 gallery-item">
+            <a href="Gallery/gradstudent3.jpg" data-lightbox="school" data-title="School Event">
+              <img src="Gallery/gradstudent3.jpg" alt="School Event">
+            </a>
+          </div>
+          <div class="col-md-4 gallery-item">
+            <a href="Gallery/gradstudent4.jpg" data-lightbox="school" data-title="School Event">
+              <img src="Gallery/gradstudent4.jpg" alt="School Event">
+            </a>
+          </div>
+          <div class="col-md-4 gallery-item">
+            <a href="Gallery/gradstudent5.jpg" data-lightbox="school" data-title="School Event">
+              <img src="Gallery/gradstudent5.jpg" alt="School Event">
+            </a>
+          </div>
+          <div class="col-md-4 gallery-item">
+            <a href="Gallery/min-parent1.jpg" data-lightbox="school" data-title="School Event">
+              <img src="Gallery/min-parent1.jpg" alt="School Event">
+            </a>
+          </div>
+          <div class="col-md-4 gallery-item">
+            <a href="Gallery/min-parent2.jpg" data-lightbox="school" data-title="School Event">
+              <img src="Gallery/min-parent2.jpg" alt="School Event">
+            </a>
+          </div>
+          <div class="col-md-4 gallery-item">
+            <a href="Gallery/mini-parent4.jpg" data-lightbox="school" data-title="School Event">
+              <img src="Gallery/mini-parent4.jpg" alt="School Event">
+            </a>
+          </div>
+          <div class="col-md-4 gallery-item">
+            <a href="Gallery/miniparent3.jpg" data-lightbox="school" data-title="School Event">
+              <img src="Gallery/miniparent3.jpg" alt="School Event">
+            </a>
+          </div>
+          <div class="col-md-4 gallery-item">
+            <a href="Gallery/mini-parent4.jpg" data-lightbox="school" data-title="School Event">
+              <img src="Gallery/mini-parent4.jpg" alt="School Event">
+            </a>
+          </div>
+          <div class="col-md-4 gallery-item">
+            <a href="Gallery/mini-parent5.jpg" data-lightbox="school" data-title="School Event">
+              <img src="Gallery/mini-parent5.jpg" alt="School Event">
+            </a>
+          </div>
+          <div class="col-md-4 gallery-item">
+            <a href="Gallery/mini-parent6.jpg" data-lightbox="school" data-title="School Event">
+              <img src="Gallery/mini-parent6.jpg" alt="School Event">
+            </a>
+          </div>
+          <div class="col-md-4 gallery-item">
+            <a href="Gallery/mini-parent7.jpg" data-lightbox="school" data-title="School Event">
+              <img src="Gallery/mini-parent7.jpg" alt="School Event">
+            </a>
+          </div>
+          <div class="col-md-4 gallery-item">
+            <a href="Gallery/ministry-jean.jpg" data-lightbox="school" data-title="School Event">
+              <img src="Gallery/ministry-jean.jpg" alt="School Event">
+            </a>
+          </div>
+          <div class="col-md-4 gallery-item">
+            <a href="Gallery/ministry1.jpg" data-lightbox="school" data-title="School Event">
+              <img src="Gallery/ministry1.jpg" alt="School Event">
+            </a>
+          </div>
+          <div class="col-md-4 gallery-item">
+            <a href="Gallery/ministry2.jpg" data-lightbox="school" data-title="School Event">
+              <img src="Gallery/ministry2.jpg" alt="School Event">
+            </a>
+          </div>
+          <div class="col-md-4 gallery-item">
+            <a href="Gallery/ministryrev.jpg" data-lightbox="school" data-title="School Event">
+              <img src="Gallery/ministryrev.jpg" alt="School Event">
+            </a>
+          </div>
+          <div class="col-md-4 gallery-item">
+            <a href="Gallery/present 1.jpg" data-lightbox="school" data-title="School Event">
+              <img src="Gallery/present 1.jpg" alt="School Event">
+            </a>
+          </div>
+          <div class="col-md-4 gallery-item">
+            <a href="Gallery/revbengrad.jpg" data-lightbox="school" data-title="School Event">
+              <img src="Gallery/revbengrad.jpg" alt="School Event">
+            </a>
+          </div>
+          <div class="col-md-4 gallery-item">
+            <a href="Gallery/school1.jpg" data-lightbox="school" data-title="School Event">
+              <img src="Gallery/school1.jpg" alt="School Event">
+            </a>
+          </div>
+          <div class="col-md-4 gallery-item">
+            <a href="Gallery/school2.jpg" data-lightbox="school" data-title="School Event">
+              <img src="Gallery/school2.jpg" alt="School Event">
+            </a>
+          </div>
+          <div class="col-md-4 gallery-item">
+            <a href="Gallery/rachael-parent.jpg" data-lightbox="school" data-title="School Event">
+              <img src="Gallery/rachael-parent.jpg" alt="School Event">
+            </a>
+          </div>
+          <div class="col-md-4 gallery-item">
+            <a href="Gallery/pg1.jpg" data-lightbox="school" data-title="School Event">
+              <img src="Gallery/pg1.jpg" alt="School Event">
+            </a>
+          </div>
+          <div class="col-md-4 gallery-item">
+            <a href="Gallery/pg2.jpg" data-lightbox="school" data-title="School Event">
+              <img src="Gallery/pg2.jpg" alt="School Event">
+            </a>
+          </div>
+          <div class="col-md-4 gallery-item">
+            <a href="Gallery/pp1.jpg" data-lightbox="school" data-title="School Event">
+              <img src="Gallery/pp1.jpg" alt="School Event">
+            </a>
+          </div>
+          <div class="col-md-4 gallery-item">
+            <a href="Gallery/pp11.jpg" data-lightbox="school" data-title="School Event">
+              <img src="Gallery/pp11.jpg" alt="School Event">
+            </a>
+          </div>
+          <div class="col-md-4 gallery-item">
+            <a href="Gallery/pp2.jpg" data-lightbox="school" data-title="School Event">
+              <img src="Gallery/pp2.jpg" alt="School Event">
+            </a>
+          </div>
+          <div class="col-md-4 gallery-item">
+            <a href="Gallery/pp21.jpg" data-lightbox="school" data-title="School Event">
+              <img src="Gallery/pp21.jpg" alt="School Event">
+            </a>
+          </div>
+          <div class="col-md-4 gallery-item">
+            <a href="Gallery/pp22.jpg" data-lightbox="school" data-title="School Event">
+              <img src="Gallery/pp22.jpg" alt="School Event">
+            </a>
+          </div>
+          <div class="col-md-4 gallery-item">
+            <a href="Gallery/g1.jpg" data-lightbox="school" data-title="School Event">
+              <img src="Gallery/g1.jpg" alt="School Event">
+            </a>
+          </div>
+          <div class="col-md-4 gallery-item">
+            <a href="Gallery/g12.jpg" data-lightbox="school" data-title="School Event">
+              <img src="Gallery/g12.jpg" alt="School Event">
+            </a>
+          </div>
+          <div class="col-md-4 gallery-item">
+            <a href="Gallery/g13.jpg" data-lightbox="school" data-title="School Event">
+              <img src="Gallery/g13.jpg" alt="School Event">
+            </a>
+          </div>
+          <div class="col-md-4 gallery-item">
+            <a href="Gallery/g21.jpg" data-lightbox="school" data-title="School Event">
+              <img src="Gallery/g21.jpg" alt="School Event">
+            </a>
+          </div>
+          <div class="col-md-4 gallery-item">
+            <a href="Gallery/g22.jpg" data-lightbox="school" data-title="School Event">
+              <img src="Gallery/g22.jpg" alt="School Event">
+            </a>
+          </div>
+          <div class="col-md-4 gallery-item">
+            <a href="Gallery/g23.jpg" data-lightbox="school" data-title="School Event">
+              <img src="Gallery/g23.jpg" alt="School Event">
+            </a>
+          </div>
+          <div class="col-md-4 gallery-item">
+            <a href="Gallery/g3.jpg" data-lightbox="school" data-title="School Event">
+              <img src="Gallery/g3.jpg" alt="School Event">
+            </a>
+          </div>
+          <div class="col-md-4 gallery-item">
+            <a href="Gallery/g31.jpg" data-lightbox="school" data-title="School Event">
+              <img src="Gallery/g31.jpg" alt="School Event">
+            </a>
+          </div>
+          <div class="col-md-4 gallery-item">
+            <a href="Gallery/g32.jpg" data-lightbox="school" data-title="School Event">
+              <img src="Gallery/g32.jpg" alt="School Event">
+            </a>
+          </div>
+          <div class="col-md-4 gallery-item">
+            <a href="Gallery/g4.jpg" data-lightbox="school" data-title="School Event">
+              <img src="Gallery/g4.jpg" alt="School Event">
+            </a>
+          </div>
+          <div class="col-md-4 gallery-item">
+            <a href="Gallery/g41.jpg" data-lightbox="school" data-title="School Event">
+              <img src="Gallery/g41.jpg" alt="School Event">
+            </a>
+          </div>
+          <div class="col-md-4 gallery-item">
+            <a href="Gallery/g42.jpg" data-lightbox="school" data-title="School Event">
+              <img src="Gallery/g42.jpg" alt="School Event">
+            </a>
+          </div>
+          <div class="col-md-4 gallery-item">
+            <a href="Gallery/g5.jpg" data-lightbox="school" data-title="School Event">
+              <img src="Gallery/g5.jpg" alt="School Event">
+            </a>
+          </div>
+          <div class="col-md-4 gallery-item">
+            <a href="Gallery/g51.jpg" data-lightbox="school" data-title="School Event">
+              <img src="Gallery/g51.jpg" alt="School Event">
+            </a>
+          </div>
+          <!-- Add more school images here -->
+        </div>
+      </div>
+
+      <!-- Co-Curricular Category -->
+      <div class="gallery-category">
+        <h3>Co-Curricular</h3>
+        <div class="row">
+          <!-- Co-Curricular Images -->
+          <div class="col-md-4 gallery-item">
+            <a href="Gallery/animalopharnage.jpg" data-lightbox="co-curricular" data-title="Co-Curricular Event">
+              <img src="Gallery/animalopharnage.jpg" alt="Co-Curricular Event">
+            </a>
+          </div>
+          <div class="col-md-4 gallery-item">
+            <a href="Gallery/animalorph2.jpg" data-lightbox="co-curricular" data-title="Co-Curricular Event">
+              <img src="Gallery/animalorph2.jpg" alt="Co-Curricular Event">
+            </a>
+          </div>
+          <div class="col-md-4 gallery-item">
+            <a href="Gallery/trip1.jpg" data-lightbox="co-curricular" data-title="Co-Curricular Event">
+              <img src="Gallery/trip1.jpg" alt="Co-Curricular Event">
+            </a>
+          </div>
+          <div class="col-md-4 gallery-item">
+            <a href="Gallery/trip2.jpg" data-lightbox="co-curricular" data-title="Co-Curricular Event">
+              <img src="Gallery/trip2.jpg" alt="Co-Curricular Event">
+            </a>
+          </div>
+          <div class="col-md-4 gallery-item">
+            <a href="Gallery/trip3.jpg" data-lightbox="co-curricular" data-title="Co-Curricular Event">
+              <img src="Gallery/trip3.jpg" alt="Co-Curricular Event">
+            </a>
+          </div>
+          <div class="col-md-4 gallery-item">
+            <a href="Gallery/trip4.jpg" data-lightbox="co-curricular" data-title="Co-Curricular Event">
+              <img src="Gallery/trip4.jpg" alt="Co-Curricular Event">
+            </a>
+          </div>
+          <div class="col-md-4 gallery-item">
+            <a href="Gallery/swiming1.jpg" data-lightbox="co-curricular" data-title="Co-Curricular Event">
+              <img src="Gallery/swiming1.jpg" alt="Co-Curricular Event">
+            </a>
+          </div>
+          <div class="col-md-4 gallery-item">
+            <a href="Gallery/swiming 2.jpg.jpg" data-lightbox="co-curricular" data-title="Co-Curricular Event">
+              <img src="Gallery/swiming 2.jpg" alt="Co-Curricular Event">
+            </a>
+          </div>
+          <div class="col-md-4 gallery-item">
+            <a href="Gallery/swiming 3.jpg" data-lightbox="co-curricular" data-title="Co-Curricular Event">
+              <img src="Gallery/swiming 3.jpg" alt="Co-Curricular Event">
+            </a>
+          </div>
+          <div class="col-md-4 gallery-item">
+            <a href="Gallery/swiming4.jpg" data-lightbox="co-curricular" data-title="Co-Curricular Event">
+              <img src="Gallery/swiming4.jpg" alt="Co-Curricular Event">
+            </a>
+          </div>
+          <div class="col-md-4 gallery-item">
+            <a href="Gallery/teachers1.jpg" data-lightbox="co-curricular" data-title="Co-Curricular Event">
+              <img src="Gallery/teachers1.jpg" alt="Co-Curricular Event">
+            </a>
+          </div>
+          <div class="col-md-4 gallery-item">
+            <a href="Gallery/teachers2.jpg" data-lightbox="co-curricular" data-title="Co-Curricular Event">
+              <img src="Gallery/teachers2.jpg" alt="Co-Curricular Event">
+            </a>
+          </div>
+          <div class="col-md-4 gallery-item">
+            <a href="images/24trip.jpg" data-lightbox="co-curricular" data-title="Co-Curricular Event">
+              <img src="images/24trip.jpg" alt="Co-Curricular Event">
+            </a>
+          </div>
+          <div class="col-md-4 gallery-item">
+            <a href="images/24trip1.jpg" data-lightbox="co-curricular" data-title="Co-Curricular Event">
+              <img src="images/24trip1.jpg" alt="Co-Curricular Event">
+            </a>
+          </div>
+          <div class="col-md-4 gallery-item">
+            <a href="images/24trip2.jpg" data-lightbox="co-curricular" data-title="Co-Curricular Event">
+              <img src="images/24trip2.jpg" alt="Co-Curricular Event">
+            </a>
+          </div>
+          <div class="col-md-4 gallery-item">
+            <a href="images/24trip3.jpg" data-lightbox="co-curricular" data-title="Co-Curricular Event">
+              <img src="images/24trip3.jpg" alt="Co-Curricular Event">
+            </a>
+          </div>
+          <div class="col-md-4 gallery-item">
+            <a href="images/24trip4.jpg" data-lightbox="co-curricular" data-title="Co-Curricular Event">
+              <img src="images/24trip4.jpg" alt="Co-Curricular Event">
+            </a>
+          </div>
+          <div class="col-md-4 gallery-item">
+            <a href="images/24trip5.jpg" data-lightbox="co-curricular" data-title="Co-Curricular Event">
+              <img src="images/24trip5.jpg" alt="Co-Curricular Event">
+            </a>
+          </div>
+          <div class="col-md-4 gallery-item">
+            <a href="images/24trip6.jpg" data-lightbox="co-curricular" data-title="Co-Curricular Event">
+              <img src="images/24trip6.jpg" alt="Co-Curricular Event">
+            </a>
+          </div>
+          <div class="col-md-4 gallery-item">
+            <a href="images/24trip7.jpg" data-lightbox="co-curricular" data-title="Co-Curricular Event">
+              <img src="images/24trip7.jpg" alt="Co-Curricular Event">
+            </a>
+          </div>
+          <div class="col-md-4 gallery-item">
+            <a href="images/24trip8.jpg" data-lightbox="co-curricular" data-title="Co-Curricular Event">
+              <img src="images/24trip8.jpg" alt="Co-Curricular Event">
+            </a>
+          </div>
+          <div class="col-md-4 gallery-item">
+            <a href="images/24trip9.jpg" data-lightbox="co-curricular" data-title="Co-Curricular Event">
+              <img src="Gallery/trip1.jpg" alt="Co-Curricular Event">
+            </a>
+          </div>
+          <div class="col-md-4 gallery-item">
+            <a href="Gallery/trip1.jpg" data-lightbox="co-curricular" data-title="Co-Curricular Event">
+              <img src="images/24trip9.jpg" alt="Co-Curricular Event">
+            </a>
+          </div>
+          <div class="col-md-4 gallery-item">
+            <a href="images/24trip10.jpg" data-lightbox="co-curricular" data-title="Co-Curricular Event">
+              <img src="images/24trip10.jpg" alt="Co-Curricular Event">
+            </a>
+          </div>
+          <div class="col-md-4 gallery-item">
+            <a href="images/24trip11.jpg" data-lightbox="co-curricular" data-title="Co-Curricular Event">
+              <img src="images/24trip11.jpg" alt="Co-Curricular Event">
+            </a>
+          </div>
+          <div class="col-md-4 gallery-item">
+            <a href="images/24trip12.jpg" data-lightbox="co-curricular" data-title="Co-Curricular Event">
+              <img src="images/24trip12.jpg" alt="Co-Curricular Event">
+            </a>
+          </div>
+          <div class="col-md-4 gallery-item">
+            <a href="images/24trip13.jpg" data-lightbox="co-curricular" data-title="Co-Curricular Event">
+              <img src="images/24trip13.jpg" alt="Co-Curricular Event">
+            </a>
+          </div>
+          <div class="col-md-4 gallery-item">
+            <a href="images/24trip14.jpg" data-lightbox="co-curricular" data-title="Co-Curricular Event">
+              <img src="images/24trip14.jpg" alt="Co-Curricular Event">
+            </a>
+          </div>
+          <div class="col-md-4 gallery-item">
+            <a href="images/peter.jpg" data-lightbox="co-curricular" data-title="Co-Curricular Event">
+              <img src="images/peter.jpg" alt="Co-Curricular Event">
+            </a>
+          </div>
+          <div class="col-md-4 gallery-item">
+            <a href="images/food.jpg" data-lightbox="co-curricular" data-title="Co-Curricular Event">
+              <img src="images/food.jpg" alt="Co-Curricular Event">
+            </a>
+          </div>
+          <!-- Add more co-curricular images here -->
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-dark text-white text-center py-4">
+    <div class="container">
+      <p>&copy; 2025 Heriwadi Christian School. All rights reserved.</p>
+      <p>
+        <a href="#" class="text-white me-3">Privacy Policy</a> |
+        <a href="#" class="text-white ms-3">Terms of Use</a>
+      </p>
+    </div>
+  </footer>
+
+  <!-- Bootstrap JS and Dependencies -->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <!-- Lightbox JS -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/js/lightbox.min.js"></script>
+</body>
+</html>
