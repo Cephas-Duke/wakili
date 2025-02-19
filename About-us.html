@@ -179,6 +179,36 @@
         .navbar-nav .nav-link:hover {
             color: #007bff !important;
         }
+        .whatsapp-button {
+         position: fixed;
+         bottom: 20px;
+         right: 20px;
+         background-color: #25d366;
+         color: white;
+         padding: 15px;
+         border-radius: 50%;
+         text-decoration: none;
+         font-size: 24px;
+         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+         animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+        0% {
+         transform: scale(1);
+        }
+        50% {
+         transform: scale(1.1);
+        }
+        100% {
+         transform: scale(1);
+        }
+        }
+
+        .whatsapp-button:hover {
+         background-color: #128c7e;
+         animation: none;
+        }
     </style>
 </head>
 <body>
@@ -381,6 +411,10 @@
             </div>
         </div>
     </section>
+    <!-- WhatsApp Button -->
+    <a href="https://wa.me/254723322449" class="whatsapp-button" target="_blank" aria-label="Chat on WhatsApp">
+        <i class="fab fa-whatsapp"></i>
+    </a>
 
     <!-- Call-to-Action Section -->
     <section class="cta-section">
