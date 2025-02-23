@@ -46,6 +46,26 @@
     .hero-section .btn:hover {
       background-color: #a00;
     }
+    /* Styling for the heading */
+    .hero-section h1 {
+            font-size: 3rem;
+            color: white;
+            opacity: 0; /* Start invisible */
+            transform: translateY(20px); /* Start slightly below */
+            animation: fadeInUp 1.5s ease-out forwards; /* Apply animation */
+        }
+
+        /* Keyframes for the fade-in and slide-up animation */
+        @keyframes fadeInUp {
+            0% {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
 
     /* Admission Requirements */
     .admission-requirements {
@@ -316,6 +336,9 @@
          background-color: #128c7e;
          animation: none;
         }
+       .btn{
+        animation: pulse 2s infinite;
+       } 
   </style>
 </head>
 <body>
@@ -339,7 +362,7 @@
         </div>
         <div class="contact-item">
           <div><i class="fas fa-envelope"></i></div>
-          <div><span>Email:</span> <a href="mailto:heriwadichristianschools@gmail.com">heriwadichristianschools@gmail.com</a></div>
+          <div><span>Email:</span> <a href="mailto:heriwadics@gmail.com">heriwadichristianschools@gmail.com</a></div>
         </div>
         <div class="contact-item">
           <div><i class="fas fa-map-marker-alt"></i></div>
