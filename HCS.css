@@ -240,3 +240,6 @@ iframe {
   align-items: center; /* Center vertically */
   justify-content: center; /* Center horizontally */
 }
+.custom-margin {
+  margin-top: 30px; /* Adjust the value as needed */
+}
