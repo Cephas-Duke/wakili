@@ -199,6 +199,45 @@
         .navbar-nav .nav-link:hover {
             color: #007bff !important;
         }
+        /* Ensure the navigation bar is above everything */
+.navbar {
+  position: relative;
+  z-index: 1000; /* High z-index to keep it above the overlay */
+  background: color#b00a0a; /* Ensure the navbar has a solid background */
+}
+
+/* Background image and overlay for sections */
+.section-with-bg {
+  background-image: url('images/assembly.jpg'); /* Replace with your image path */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  padding: 100px 0;
+  color: white;
+  position: relative; /* Required for the overlay */
+}
+
+/* Overlay for background sections only */
+.section-with-bg::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5); /* Black overlay with 50% opacity */
+  z-index: 0; /* Places the overlay behind the content */
+}
+
+.section-with-bg .container {
+  position: relative;
+  z-index: 1; /* Ensures content is above the overlay */
+}
+.text-center {
+font-weight: 700;
+}
+ 
         .whatsapp-button {
          position: fixed;
          bottom: 20px;
@@ -341,7 +380,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-6">
-                    <img src="images/vision.png" alt="Vision of Heriwadi Christian School" class="img-fluid rounded">
+                 <img src="images/vision.jpeg" alt="vision of Heriwadi Christian School" class="img-fluid rounded" style="width: 100%; max-width: 600px; height: auto;">
                 </div>
                 <div class="col-md-6">
                     <h2>OUR VISION</h2>
@@ -353,48 +392,47 @@
         </div>
     </section>
 
-    <!-- History Section -->
-    <section class="section bg-light">
-        <div class="container">
-            <h2 class="text-center">Our History</h2>
-            <p class="text-center">
-                Established in 2018, Heriwadi Christian School has grown from a small community school to a leading 
-                educational institution in Ongata Rongai. Over the years, we have remained committed to our core values 
-                of excellence, holistic growth, and servant leadership.
-            </p>
-            <p class="text-center">
-                Heriwadi Christian Schools enrolled her first student in September 2018. This was the third term for the school calendar. On that first enrolment, there was an intake of two learners. The term ended with the two learners.
-            </p>
-            <p class="text-center">
-                The following year, HCS was determined to offer education and opened her doors for learners. There was an enrolment of three new learners, but one of the previous learners had dropped. There were four learners by the end of the first term.
-            </p>
+   <!-- History Section -->
+<section class="section-with-bg">
+    <div class="container">
+      <h2 class="text-center">Our History</h2>
+      <p class="text-center">
+        Established in 2018, Heriwadi Christian School has grown from a small community school to a leading 
+        educational institution in Ongata Rongai. Over the years, we have remained committed to our core values 
+        of excellence, holistic growth, and servant leadership.
+      </p>
+      <p class="text-center">
+        Heriwadi Christian Schools enrolled her first student in September 2018. This was the third term for the school calendar. On that first enrolment, there was an intake of two learners. The term ended with the two learners.
+      </p>
+      <p class="text-center">
+        The following year, HCS was determined to offer education and opened her doors for learners. There was an enrolment of three new learners, but one of the previous learners had dropped. There were four learners by the end of the first term.
+      </p>
+    </div>
+  </section>
+  
+  <!-- Core Values Section -->
+  <section class="section-with-bg">
+    <div class="container">
+      <h2 class="text-center">Our Core Values</h2>
+      <div class="row core-values">
+        <div class="col-md-4 value-item">
+          <i class="fas fa-book"></i>
+          <h3>Excellence</h3>
+          <p>We strive for academic and personal excellence in all that we do.</p>
         </div>
-    </section>
-
-    <!-- Core Values Section -->
-    <section class="section">
-        <div class="container">
-            <h2 class="text-center">Our Core Values</h2>
-            <div class="row core-values">
-                <div class="col-md-4 value-item">
-                    <i class="fas fa-book"></i>
-                    <h3>Excellence</h3>
-                    <p>We strive for academic and personal excellence in all that we do.</p>
-                </div>
-                <div class="col-md-4 value-item">
-                    <i class="fas fa-hand-holding-heart"></i>
-                    <h3>Servant Leadership</h3>
-                    <p>We uphold the highest standards of honesty and ethical behavior.</p>
-                </div>
-                <div class="col-md-4 value-item">
-                    <i class="fas fa-users"></i>
-                    <h3>Holistic Growth</h3>
-                    <p>We foster a sense of belonging and collaboration among our students and staff.</p>
-                </div>
-            </div>
+        <div class="col-md-4 value-item">
+          <i class="fas fa-hand-holding-heart"></i>
+          <h3>Servant Leadership</h3>
+          <p>We uphold the highest standards of honesty and ethical behavior.</p>
         </div>
-    </section>
-
+        <div class="col-md-4 value-item">
+          <i class="fas fa-users"></i>
+          <h3>Holistic Growth</h3>
+          <p>We foster a sense of belonging and collaboration among our students and staff.</p>
+        </div>
+      </div>
+    </div>
+  </section>
     <!-- Leadership Section -->
     <section class="section bg-light">
         <div class="container">
