@@ -339,6 +339,50 @@
        .btn{
         animation: pulse 2s infinite;
        } 
+       .download-section {
+  text-align: center;
+  padding: 50px 0;
+}
+
+.download-section h2 {
+  font-size: 36px;
+  margin-bottom: 20px;
+}
+
+.download-section p {
+  font-size: 18px;
+  margin-bottom: 30px;
+}
+
+/* Pulse Animation */
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.download-button {
+  background: #ff6f61;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background 0.3s ease;
+  animation: pulse 2s infinite; /* Add the pulse animation */
+}
+
+.download-button:hover {
+  background: #e65a50;
+  animation: none; /* Stop the pulse animation on hover */
+}
   </style>
 </head>
 <body>
@@ -509,6 +553,15 @@
         <button type="submit">Submit Application</button>
       </form>
     </div>
+  </section>
+  <section class="download-section">
+    <h2>Download The Admission-form</h2>
+    <p>Download the admission form and submit it to our admissions team.</p>
+    <a href="files/Admission form.pdf.pdf" download>
+      <button class="download-button">
+        <i class="fas fa-download"></i> Download admission form
+      </button>
+    </a>
   </section>
   <!-- WhatsApp Button -->
   <a href="https://wa.me/254723322449" class="whatsapp-button" target="_blank" aria-label="Chat on WhatsApp">
