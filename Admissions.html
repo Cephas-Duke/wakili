@@ -589,47 +589,39 @@
    </footer>
    <script>
     function submitViaWhatsApp(event) {
-      event.preventDefault(); // Prevent default form submission
-  
-      // Get form data
-      const name = document.getElementById('name').value;
-      const email = document.getElementById('email').value;
-      const phone = document.getElementById('phone').value;
-      const message = document.getElementById('message').value;
-  
-      // Format the message
-      const whatsappMessage = `Name: ${name}%0AEmail: ${email}%0APhone: ${phone}%0AMessage: ${message}`;
-  
-      // Open WhatsApp with the pre-filled message
-      window.open(`https://wa.me/254723322449?text=${whatsappMessage}`, '_blank');
-    }
-  </script>
+  event.preventDefault(); // Prevent default form submission
 
-  <!-- Bootstrap JS and Dependencies -->
-  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  // Get form data
+  const fullName = document.getElementById('fullName').value;
+  const email = document.getElementById('email').value;
+  const phone = document.getElementById('phone').value;
+  const grade = document.getElementById('grade').value;
+  const message = document.getElementById('message').value;
 
-  <!-- Form Submission Script -->
-  <script>
-    document.getElementById('applicationForm').addEventListener('submit', function (event) {
-      event.preventDefault(); // Prevent form submission
+  // Validate form fields
+  if (!fullName || !email || !phone || !grade) {
+    alert('Please fill out all required fields.');
+    return;
+  }
 
-      // Validate form fields
-      const fullName = document.getElementById('fullName').value;
-      const email = document.getElementById('email').value;
-      const phone = document.getElementById('phone').value;
-      const grade = document.getElementById('grade').value;
+  // Format the message for WhatsApp
+  const whatsappMessage = `New Admission Application:%0A%0A` +
+                          `Full Name: ${fullName}%0A` +
+                          `Email: ${email}%0A` +
+                          `Phone: ${phone}%0A` +
+                          `Grade Applying For: ${grade}%0A` +
+                          `Additional Information: ${message}`;
 
-      if (!fullName || !email || !phone || !grade) {
-        alert('Please fill out all required fields.');
-        return;
-      }
+  // Open WhatsApp with the pre-filled message
+  window.open(`https://wa.me/254723322449?text=${whatsappMessage}`, '_blank');
 
-      // Simulate form submission (replace with actual submission logic)
-      alert('Thank you for submitting your application! We will contact you shortly.');
-      document.getElementById('applicationForm').reset(); // Clear the form
-    });
+  // Simulate form submission (optional)
+  alert('Thank you for submitting your application! We will contact you shortly.');
+  document.getElementById('applicationForm').reset(); // Clear the form
+}
+
+// Attach the function to the form submission
+document.getElementById('applicationForm').addEventListener('submit', submitViaWhatsApp);
   </script>
 </body>
 </html>
